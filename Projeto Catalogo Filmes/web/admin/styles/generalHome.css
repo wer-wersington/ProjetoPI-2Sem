@@ -1,0 +1,55 @@
+.main_page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 80px);
+  margin-left: 80px;
+}
+
+.perfil_user {
+  background-color: #A411D4;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 32px;
+}
+
+.cockpit_filmes_adm {
+  padding-left: 22px;
+  padding-right: 20px;
+  justify-content: space-between;
+  margin: 48px 0;
+  align-items: center;
+}
+.cockpit_filmes_adm .search_input {
+  display: flex;
+  position: relative;
+  align-items: center;
+  border-radius: 999px;
+  border: none;
+  padding: 12px 20px;
+  color: #665E66;
+  background: #171317;
+  transition: 0.4s;
+  cursor: pointer;
+  font-weight: 600;
+}
+.cockpit_filmes_adm .search_input input {
+  background-color: transparent;
+  border: none;
+}
+.cockpit_filmes_adm .search_input:hover {
+  filter: brightness(1.1);
+}
+.cockpit_filmes_adm .search_input span {
+  margin-right: 20px;
+}
+
+i {
+  color: #E7E7E7;
+}
+
+/*# sourceMappingURL=generalHome.css.map */
