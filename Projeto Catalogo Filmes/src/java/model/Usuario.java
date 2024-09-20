@@ -1,6 +1,9 @@
-package Controller;
+package model;
 
-public class Usuario extends ConectarDao implements IcrudDao {
+import Controller.ConectarDao;
+import Controller.IcrudDao;
+
+public class Usuario extends ConectarDao implements IcrudDao  {
 
     int pkuser;
     String email;
