@@ -1,0 +1,102 @@
+#container_G_Film {
+  flex-direction: column;
+}
+
+.cockpit_filmes_form {
+  padding-left: 22px;
+  padding-right: 20px;
+  justify-content: space-between;
+  margin: 48px 0;
+  align-items: center;
+}
+.cockpit_filmes_form .btn_return {
+  background-color: #171317;
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 16px;
+  margin-bottom: 32px;
+  color: #878387;
+  font-size: 1.1rem;
+}
+
+.inputs_area {
+  width: 800px;
+  max-width: 1320px;
+  height: 300px;
+  display: inline-flex;
+}
+.inputs_area .input_div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+.inputs_area .input_div .input_capas {
+  height: 182px;
+  background-color: #171317;
+  border: none;
+  margin-top: 16px;
+  border-radius: 8px;
+}
+.inputs_area .input_div .input_capas .banners {
+  width: 433px;
+}
+.inputs_area .input_div .input_capas .principal {
+  width: 272px;
+}
+.inputs_area .input_div .input_capas > input[type=file] {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+  background-color: #171317;
+  border: none;
+}
+.inputs_area .input_div .input_capas > input[type=file]:focus-within {
+  border: 10px solid #8501B0;
+}
+
+.inputs_area.linear {
+  display: flex;
+  flex-direction: column;
+  padding-left: 22px;
+  padding-right: 20px;
+  margin: 48px 0;
+  width: 1200px;
+  height: 560px;
+}
+.inputs_area.linear h1 {
+  padding-left: 22px;
+  padding-right: 20px;
+}
+.inputs_area.linear .div_list_inputs {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.inputs_area.linear .div_list_inputs .input_div_grid {
+  width: 264px;
+  height: 88px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 24px;
+  margin-bottom: 32px;
+}
+.inputs_area.linear .div_list_inputs .input_div_grid input {
+  margin-top: 16px;
+  height: 48px;
+  width: 264px;
+  color: #878387;
+  padding: 16px;
+  cursor: pointer;
+  background-color: #171317;
+  border: none;
+  border-radius: 8px;
+}
+
+label {
+  font-size: 20px;
+  color: #878387;
+}
+
+/*# sourceMappingURL=formsNewFilm.css.map */
