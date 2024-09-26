@@ -6,6 +6,7 @@ import Controller.IcrudDao;
 public class Usuario extends ConectarDao implements IcrudDao  {
 
     int pkuser;
+    String nome;
     String email;
     String senha;
 
@@ -40,7 +41,14 @@ public class Usuario extends ConectarDao implements IcrudDao  {
             return false;
         }
     }
+    public String getNome() {
+        return nome;
+    }
 
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    
 
 @Override
 public boolean salvar() {
@@ -61,6 +69,6 @@ public boolean buscar() {
 public boolean buscarSQL() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-    
-    
+
+
 }
