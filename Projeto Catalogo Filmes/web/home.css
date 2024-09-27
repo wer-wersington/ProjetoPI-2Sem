@@ -55,8 +55,8 @@
   gap: 12px;
   padding-left: 16px;
   padding-right: 16px;
+  padding-top: 16px;
   place-items: center;
-  
 }
 #filmes_container .filme_content {
   position: relative;
@@ -101,4 +101,6 @@
     min-height: 178px;
     margin-bottom: 12px;
   }
-}/*# sourceMappingURL=home.css.map */
+}
+
+/*# sourceMappingURL=home.css.map */

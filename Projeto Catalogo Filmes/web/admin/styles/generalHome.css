@@ -4,6 +4,7 @@
   align-items: center;
   width: calc(100% - 80px);
   margin-left: 80px;
+  min-height: 100vh;
 }
 
 .perfil_user {

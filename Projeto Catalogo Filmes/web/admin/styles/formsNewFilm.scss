@@ -1,7 +1,12 @@
+.div_security_area{
+    min-height: 150vh;
+}
 #container_G_Film{
-    flex-direction:column ;
+    // flex-direction:column ;
+    min-height: 100vh;
 }
 .cockpit_filmes_form{
+    flex: 1;
     padding-left: 22px;
     padding-right: 20px;
     justify-content: space-between;
@@ -80,7 +85,7 @@
     }
     .div_list_inputs{
         display: flex;
-        // justify-content: space-around;
+       
         flex-wrap: wrap;
         margin-top: 40px;
      
@@ -120,7 +125,7 @@
             
             
         } .input_div_grid.desc_area{
-                // width: 550px;
+            
                 max-height: 450px;
              
 
@@ -138,14 +143,14 @@
             height: 280px;
             margin-bottom: 30px;
             margin-left: 26px;
-            // margin-top: 6px;
+            
             background-image: url("../../imgs/foto34.png");
            border-radius: 8px;
         }
         .box_color_bg{
             visibility: hidden;
             background-color: #171317;
-            opacity: 0.6;
+            opacity: 1;
             width: 100%;
             height: 100%;
         }
@@ -159,22 +164,16 @@
         .container_names_actors{
             width: 100%;
             height: 30%;
-            // background-color: #8501B0;
+            
             padding: 10px;
             margin-top:-95px;
             opacity: 1;
-            position: absolute;
+           
             
 
 
         }
-        // .actors_div_film img{
-            
-        //     width: 210px;
-        //     height: 280px;
-           
-           
-        // }
+      
        
         .title_persona_name{
             font-size: 16px;
@@ -183,6 +182,59 @@
             font-size: 20px;
         }
         
+    }
+    
+}
+footer{
+    min-width: calc(100% - 80px);
+    margin-left: 80px;  
+    height: 256px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    .footer_container_area{
+        display: flex;
+
+        max-width: 100%;
+        min-height: 56px;
+        padding: 16px;
+        // background-color: #8501B0;
+        margin-right:72px ;
+        button{
+            width: 198px;
+            height: 54px;
+            border-radius: 100px;
+            margin-right: 32px;
+        }
+        .cancel_btn{
+            background-color: transparent;
+            border: 1px solid #878387;
+            color: #878387;
+            font-size: 22px;
+            text-align: center;
+            margin-bottom: 8px;
+
+          
+            // i{
+            //     font-size: 16px;
+            //     color: #878387;
+            //     margin-bottom: 8px;
+            //     margin-right: 6px;
+            // }
+        }
+        .add_btn{
+            background-color: #8501B0;
+            border: none;
+            color: #E7E7E7;
+            font-size: 22px;
+            text-align: center;
+            margin-bottom: 8px;
+            i{
+                font-size: 16px;
+                margin-right: 6px;
+                margin-bottom: 8px;
+            }
+        }
     }
 }
 .div_list_inputs.colunm{
@@ -193,3 +245,4 @@ label{
       font-size: 20px;
       color: #878387;  
 }
+

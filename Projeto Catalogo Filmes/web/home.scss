@@ -1,4 +1,4 @@
-@import "../../colors";
+@import "../web/colors";
 
 #Destaques{
     position: relative;
@@ -23,6 +23,7 @@
     .container{
         inset: 0;
         min-height: 500px;
+       
         
         .avatar_image{
             width: 72px;
@@ -70,6 +71,7 @@
     gap: 12px;
     padding-left: 16px;
     padding-right: 16px;
+    padding-top: 16px;
     place-items: center;
 
     .filme_content{
