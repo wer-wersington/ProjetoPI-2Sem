@@ -16,17 +16,23 @@ public class ConectarDao {
     public PreparedStatement ps = null;
     public String htmlError = null;
     public ResultSet tab = null;
+    public String MeuBanco = "catalogofilms";
+    public String statusSQL; /* Na variável statusSQl conterá null quando não tiver erros
+Mas quando haver erros conterá a mensagem de erro capturada
+Pela excessão da clausula try. */
 
     public ConectarDao() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306", "root", "");
             criarBanco();
+            statusSQL = null;
         } catch (ClassNotFoundException ex) {
-            htmlError = "Houve erro ao executar - " + ex.getMessage();
+            htmlError = "Driver JDBC não encontrado! " + ex.getMessage();
         } catch (SQLException ex) {
-            htmlError = "Houve erro ao executar - " + ex.getMessage();
+            htmlError = "Servidor fora do ar ou Erro no comando SQL !" + ex.getMessage();
         }
+
     }
 
     public void criarBanco() {
