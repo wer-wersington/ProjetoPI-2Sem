@@ -1,0 +1,212 @@
+.div_security_area {
+  min-height: 150vh;
+}
+
+#container_G_Film {
+  min-height: 100vh;
+}
+
+.cockpit_filmes_form {
+  flex: 1;
+  padding-left: 22px;
+  padding-right: 20px;
+  justify-content: space-between;
+  margin: 48px 0;
+  align-items: center;
+}
+.cockpit_filmes_form .btn_return {
+  background-color: #171317;
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 16px;
+  margin-bottom: 32px;
+  color: #878387;
+  font-size: 1.1rem;
+}
+
+.inputs_area {
+  width: 800px;
+  max-width: 1320px;
+  height: 300px;
+  display: inline-flex;
+}
+.inputs_area .input_div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+.inputs_area .input_div .input_capas {
+  height: 182px;
+  background-color: #171317;
+  border: none;
+  margin-top: 16px;
+  border-radius: 8px;
+}
+.inputs_area .input_div .input_capas .banners {
+  width: 433px;
+}
+.inputs_area .input_div .input_capas .principal {
+  width: 272px;
+}
+.inputs_area .input_div .input_capas > input[type=file] {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+  background-color: #171317;
+  border: none;
+}
+.inputs_area .input_div .input_capas > input[type=file]:focus-within {
+  border: 10px solid #8501B0;
+}
+
+.inputs_area.linear {
+  display: flex;
+  flex-direction: column;
+  padding-left: 22px;
+  padding-right: 20px;
+  margin: 48px 0;
+  width: 1200px;
+  height: 560px;
+}
+.inputs_area.linear h1 {
+  padding-left: 22px;
+  padding-right: 20px;
+}
+.inputs_area.linear .div_list_inputs {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.inputs_area.linear .div_list_inputs .input_div_grid {
+  min-width: 264px;
+  min-height: 88px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 24px;
+  margin-bottom: 32px;
+}
+.inputs_area.linear .div_list_inputs .input_div_grid input, .inputs_area.linear .div_list_inputs .input_div_grid textarea, .inputs_area.linear .div_list_inputs .input_div_grid button {
+  margin-top: 16px;
+  height: 48px;
+  width: 264px;
+  color: #878387;
+  padding: 16px;
+  cursor: pointer;
+  background-color: #171317;
+  border: none;
+  border-radius: 8px;
+}
+.inputs_area.linear .div_list_inputs .input_div_grid button {
+  font-size: 20px;
+  font-weight: 500;
+  padding-top: 12px;
+}
+.inputs_area.linear .div_list_inputs .input_div_grid button:active {
+  background-color: rgba(23, 19, 23, 0.3);
+}
+.inputs_area.linear .div_list_inputs .input_div_grid .descr_input {
+  width: 550px;
+  height: 200px;
+}
+.inputs_area.linear .div_list_inputs .input_div_grid.desc_area {
+  max-height: 450px;
+}
+.inputs_area.linear .div_list_inputs .container_actores_list {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  margin-top: 48px;
+}
+.inputs_area.linear .div_list_inputs .actors_div_film {
+  width: 210px;
+  height: 280px;
+  margin-bottom: 30px;
+  margin-left: 26px;
+  background-image: url("../../imgs/foto34.png");
+  border-radius: 8px;
+}
+.inputs_area.linear .div_list_inputs .box_color_bg {
+  visibility: hidden;
+  background-color: #171317;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+}
+.inputs_area.linear .div_list_inputs .actors_div_film:hover .box_color_bg {
+  visibility: visible;
+  background-color: #171317;
+  opacity: 0.6;
+  width: 100%;
+  height: 100%;
+}
+.inputs_area.linear .div_list_inputs .container_names_actors {
+  width: 100%;
+  height: 30%;
+  padding: 10px;
+  margin-top: -95px;
+  opacity: 1;
+}
+.inputs_area.linear .div_list_inputs .title_persona_name {
+  font-size: 16px;
+}
+.inputs_area.linear .div_list_inputs .title_actor_name {
+  font-size: 20px;
+}
+
+footer {
+  min-width: calc(100% - 80px);
+  margin-left: 80px;
+  height: 256px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+footer .footer_container_area {
+  display: flex;
+  max-width: 100%;
+  min-height: 56px;
+  padding: 16px;
+  margin-right: 72px;
+}
+footer .footer_container_area button {
+  width: 198px;
+  height: 54px;
+  border-radius: 100px;
+  margin-right: 32px;
+}
+footer .footer_container_area .cancel_btn {
+  background-color: transparent;
+  border: 1px solid #878387;
+  color: #878387;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+footer .footer_container_area .add_btn {
+  background-color: #8501B0;
+  border: none;
+  color: #E7E7E7;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+footer .footer_container_area .add_btn i {
+  font-size: 16px;
+  margin-right: 6px;
+  margin-bottom: 8px;
+}
+
+.div_list_inputs.colunm {
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+
+label {
+  font-size: 20px;
+  color: #878387;
+}
+
+/*# sourceMappingURL=formsNewFilm.css.map */
