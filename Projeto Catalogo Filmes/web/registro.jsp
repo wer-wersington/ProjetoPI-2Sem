@@ -19,7 +19,7 @@
 if ( !(user.statusSQL == null) ) out.println(user.statusSQL);{
     if("".equals(buttonval)){
          String sHTML="<center>Usuário criado com Sucesso!<br>"
-        + "<a href = '../Login.html'> Voltar </a></center>"; out.println(sHTML); }
+        + "<a href = '../login.html'> Voltar </a></center>"; out.println(sHTML); }
 }
 %>
 <!DOCTYPE html>
