@@ -41,6 +41,6 @@ if ( !(user.statusSQL == null) ) out.println(user.statusSQL);{
                      </td></tr><tr><td align="right">Repita sua Senha..:</td><td><input type="password" name = rpsenha required>
                      </td></tr>
                         <td></td><td align = center>
-                            <input type="button" value="Voltar" onclick="window.location.assign('Login.html');">
+                            <input type="button" value="Voltar" onclick="window.location.assign('login.html');">
                             <input type="submit" value="Enviar" name="Enviar" onclick="formreg.oper.value = '1';"></td></tr> </table>
             </form> </div> </body> </html>
