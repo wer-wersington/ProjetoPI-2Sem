@@ -57,19 +57,45 @@ public class Usuario extends ConectarDao implements IcrudDao  {
         return true;
         
         try {
-        sql = "SELECT * FROM TB_USUARIOS WHERE DS_EMAIL = ? AND DS_SENHA = ?";
-        ps = con.prepareStatement(sql); // prepara SQL
-        ps.setString(1, email); // Configura Parametros
-        ps.setString(2, senha); // Configura Parametros
-        tab = ps.executeQuery(); // Executa comando SQL
+            
+            sql = "SELECT * FROM TB_USUARIOS WHERE DS_EMAIL = ? AND DS_SENHA = ?";
+            ps = con.prepareStatement(sql); // prepara SQL
+            ps.setString(1, email); // Configura Parametros
+            ps.setString(2, senha); // Configura Parametros
+            tab = ps.executeQuery(); // Executa comando SQL
+            
             if (tab.next()) return true;
-                this.statusSQL = null; // armazena null se deu tudo certo
-            } catch (SQLException ex) {
+                this.statusSQL = null;// armazena null se deu tudo certo
+        } catch (SQLException ex) {
             this.statusSQL = "Erro ao tentar buscar Usuário! " + ex.getMessage();
         }
         return false;
     }
-
+    
+    public String retornarNomeUser(){
+        
+        String nomeUser = "";
+        
+        try{
+            
+            sql = "SELECT * FROM TB_USUARIOS WHERE DS_EMAIL = ? AND DS_SENHA = ?";
+            ps = con.prepareStatement(sql); // prepara SQL
+            ps.setString(1, email); // Configura Parametros
+            ps.setString(2, senha); // Configura Parametros
+            tab = ps.executeQuery(); // Executa comando SQL
+            
+            while(tab.next()){
+                nomeUser = tab.getString(2);
+            }
+        
+        }
+        catch (SQLException ex){
+            this.statusSQL = "Erro ao tentar buscar Usuário! " + ex.getMessage();
+        }       
+        
+        return nomeUser;
+    }
+    
 @Override
 public boolean salvar() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
