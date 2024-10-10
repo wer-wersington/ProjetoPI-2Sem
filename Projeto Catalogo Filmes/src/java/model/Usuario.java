@@ -39,7 +39,7 @@ public class Usuario extends ConectarDao implements IcrudDao  {
     
     
     public void incluir(){
-    try { sql = "insert into TB_USUARIOS (NM_USUARIO, DS_EMAIL, DS_SENHA) "
+    try { sql = "insert into TB_USUARIO (NM_USUARIO, DS_EMAIL, DS_SENHA) "
         + "values (?,?,?) ";
     ps = con.prepareStatement(sql);
     ps.setString(1, nome); // Configura Parametros
@@ -58,7 +58,7 @@ public class Usuario extends ConectarDao implements IcrudDao  {
         
         try {
             
-            sql = "SELECT * FROM TB_USUARIOS WHERE DS_EMAIL = ? AND DS_SENHA = ?";
+            sql = "SELECT * FROM TB_USUARIO WHERE DS_EMAIL = ? AND DS_SENHA = ?";
             ps = con.prepareStatement(sql); // prepara SQL
             ps.setString(1, email); // Configura Parametros
             ps.setString(2, senha); // Configura Parametros
@@ -78,7 +78,7 @@ public class Usuario extends ConectarDao implements IcrudDao  {
         
         try{
             
-            sql = "SELECT * FROM TB_USUARIOS WHERE DS_EMAIL = ? AND DS_SENHA = ?";
+            sql = "SELECT * FROM TB_USUARIO WHERE DS_EMAIL = ? AND DS_SENHA = ?";
             ps = con.prepareStatement(sql); // prepara SQL
             ps.setString(1, email); // Configura Parametros
             ps.setString(2, senha); // Configura Parametros
@@ -95,7 +95,23 @@ public class Usuario extends ConectarDao implements IcrudDao  {
         
         return nomeUser;
     }
-    
+    //esse aqui a gente vai usar isso aqui pra outra coisa, pra substituir a imagem.
+    public void alterar(){
+    try { sql = "update TB_USUARIO set NM_USUARIO=?, DS_EMAIL=?"
+        + " DS_SENHA=?, where DS_EMAIL=? ";
+        ps = con.prepareStatement(sql); // prepara SQL
+        ps.setString(1, nome); // Configura Parametros
+        ps.setString(2, email); // Configura Parametros
+        ps.setString(3, senha ); // Configura Parametros
+        ps.setString(4, email ); // Configura Parametros
+        ps.executeUpdate(); // executa comando SQL
+            this.statusSQL = null; // armazena null se deu tudo certo
+        } catch (SQLException ex) {
+    this.statusSQL = "Erro ao Alterar usuario ! <br> " +
+    ex.getMessage();    
+    } 
+ }
+
 @Override
 public boolean salvar() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
