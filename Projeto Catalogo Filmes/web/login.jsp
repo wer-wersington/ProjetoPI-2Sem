@@ -9,8 +9,10 @@
  user.setSenha(senha); // mude para user.setSenha(senha); 
  
  if ( user.getLogin() == true) { // faz o login no objeto user
- 
-   response.sendRedirect("/Projeto_Catalogo_Filmes");// carrega a página de sistema
+    
+   String nome = user.retornarNomeUser();
+   session.setAttribute("usuarioName", nome);
+   response.sendRedirect("index.jsp");// carrega a página de sistema
    
  } else{
     String sHTML="<center>Opa! Login ou Senha não encontrados! Tente Novamente! <br>"
