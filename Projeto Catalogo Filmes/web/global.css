@@ -65,6 +65,7 @@ img {
 }
 .input_style:hover {
   filter: brightness(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 p {
@@ -77,6 +78,4 @@ h1 {
 
 i {
   color: #E7E7E7;
-}
-
-/*# sourceMappingURL=global.css.map */
+}/*# sourceMappingURL=global.css.map */
