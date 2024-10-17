@@ -1,3 +1,6 @@
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%String nome = (String) session.getAttribute("usuarioName");%>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,8 +21,8 @@
             <img src="./imgs/destaque_foto.png" alt="Foto do filme destaque do sistema">
         </div>
         <div class="container">
-            <a href="#" class="avatar_image flex-center">
-                <img src="#" alt="Sua foto de usuario" onclick="window.location.assign('login.html');">
+            <a href="login.html" class="avatar_image flex-center">
+                <h3><%= nome%></h3>                
             </a>
             <a href="#" class="input_style btn_detalhes_destaque">Detalhes</a>
         </div>

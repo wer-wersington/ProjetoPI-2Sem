@@ -44,10 +44,10 @@ Pela excessão da clausula try. */
             ps = con.prepareStatement("use CATALOGOFILMS");
             ps.executeUpdate(); // seleciona banco
             //VOU CONCERTAR ISSO DEPOIS DE VER O DIAGRAMA DO BANCO
-            sql = "CREATE TABLE IF NOT EXISTS TB_USUARIOS ("
+            sql = "CREATE TABLE IF NOT EXISTS TB_USUARIO ("
                     + "ID_USUARIO int not null AUTO_INCREMENT ,"
                     + "NM_USUARIO varchar(200) not null ,"
-                    + "DS_EMAIL varchar(200) not null ,"
+                    + "DS_EMAIL varchar(200) not null UNIQUE,"
                     + "DS_SENHA varchar(200) not null ,"
                     + "primary key (ID_USUARIO))";
             
