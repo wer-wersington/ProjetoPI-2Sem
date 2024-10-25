@@ -7,12 +7,15 @@
     String senhas = request.getParameter("senha");
     String rpsenhas = request.getParameter("rpsenha");
     String buttonval = request.getParameter("oper");
-    
+    String email = request.getParameter("email");
     
     if(senhas != null && rpsenhas != null && senhas.equals(rpsenhas) && "1".equals(buttonval)){
         user.nome = request.getParameter("nome");
+        if(user.buscarEmail()){
         user.email = request.getParameter("email");
-        user.senha = senhas;
+        String sHTML="<center>Email encontrado com sucesso!<br>"; out.println(sHTML);
+    }
+    user.senha = senhas;
         user.incluir(); // chama o método para fazer a inclusão no banco de dados
         
     }

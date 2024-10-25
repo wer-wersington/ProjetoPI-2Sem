@@ -10,6 +10,7 @@ public class Usuario extends ConectarDao implements IcrudDao  {
     public String nome;
     public String email;
     public String senha;
+    public int pkuser;
 
 
 
@@ -111,6 +112,24 @@ public class Usuario extends ConectarDao implements IcrudDao  {
     ex.getMessage();    
     } 
  }
+    
+        public boolean buscarEmail() {
+        try {
+                sql = "select * from TB_USUARIOS where DS_EMAIL = ? ";
+                ps = con.prepareStatement(sql); // prepara SQL
+                ps.setString(1, email); // Configura Parametros
+                tab = ps.executeQuery(); // Executa comando SQL
+                if (tab.next()) {
+                this.pkuser = tab.getInt("ID_USUARIO");
+                this.nome = tab.getString("NM_USUARIO");
+                this.email = tab.getString("DS_EMAIL");
+/*                this.img = tab.getString("NM_IMAGEM");*/
+                return true;}
+                this.statusSQL = null; // armazena null se deu tudo certo
+                 } catch (SQLException ex) {
+                    this.statusSQL = "Erro ao tentar buscar Usuário! " + ex.getMessage();
+                    } return false; 
+        }
 
 @Override
 public boolean salvar() {
