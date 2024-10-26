@@ -8,6 +8,7 @@
     String rpsenhas = request.getParameter("rpsenha");
     String buttonval = request.getParameter("oper");
     String email = request.getParameter("email");
+    
         
     if(senhas != null && rpsenhas != null && senhas.equals(rpsenhas) && "1".equals(buttonval)){
         user.nome = request.getParameter("nome");
@@ -17,23 +18,26 @@
         
     }
     
-    if("2".equals(buttonval)){
-        user.email = request.getParameter("email");
-        user.deletar(); // chama o método para fazer o delete no banco de dados
-    }
-    
-    if("3".equals(buttonval)){
-        boolean emailvalid = user.buscarEmail();
-        if(emailvalid){
+    if(senhas != null && rpsenhas != null && senhas.equals(rpsenhas) && "2".equals(buttonval)){
+          
             user.nome = request.getParameter("nome");
             user.email = request.getParameter("email");
             user.senha = senhas;
-            user.alterar(); // chama o método para fazer o delete no banco de dados
-        }else{
-        String sHTML="<center>Email não encontrado !<br>"; out.println(sHTML);
+            user.deletar();// chama o método para fazer a inclusão no banco de dados
+       
+    }
+    if(senhas != null && rpsenhas != null && senhas.equals(rpsenhas) && "3".equals(buttonval)){
+        user.nome = request.getParameter("nome");
+        user.email = request.getParameter("email");
+        user.senha = senhas;
+        if(user.buscarEmail()){ 
+        user.alterar();// chama o método para fazer a inclusão no banco de dados
+         }else{
+                String sHTML="<center>Email não encontrado!<br>"; out.println(sHTML);
         }
     }
-    
+
+
     if(senhas != null && rpsenhas != null && senhas.equals(rpsenhas) && "1".equals(buttonval)){
         user.nome = request.getParameter("nome");
         if(user.buscarEmail()){
