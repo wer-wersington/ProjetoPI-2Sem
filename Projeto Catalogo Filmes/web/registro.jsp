@@ -8,17 +8,40 @@
     String rpsenhas = request.getParameter("rpsenha");
     String buttonval = request.getParameter("oper");
     String email = request.getParameter("email");
+        
+    if(senhas != null && rpsenhas != null && senhas.equals(rpsenhas) && "1".equals(buttonval)){
+        user.nome = request.getParameter("nome");
+        user.email = request.getParameter("email");
+        user.senha = senhas;
+        user.incluir(); // chama o método para fazer a inclusão no banco de dados
+        
+    }
+    
+    if("2".equals(buttonval)){
+        user.email = request.getParameter("email");
+        user.deletar(); // chama o método para fazer o delete no banco de dados
+    }
+    
+    if("3".equals(buttonval)){
+        boolean emailvalid = user.buscarEmail();
+        if(emailvalid){
+            user.nome = request.getParameter("nome");
+            user.email = request.getParameter("email");
+            user.senha = senhas;
+            user.alterar(); // chama o método para fazer o delete no banco de dados
+        }else{
+        String sHTML="<center>Email não encontrado !<br>"; out.println(sHTML);
+        }
+    }
     
     if(senhas != null && rpsenhas != null && senhas.equals(rpsenhas) && "1".equals(buttonval)){
         user.nome = request.getParameter("nome");
         if(user.buscarEmail()){
         user.email = request.getParameter("email");
-        String sHTML="<center>Email encontrado com sucesso!<br>"; out.println(sHTML);
+        //String sHTML="<center>Email encontrado com sucesso!<br>"; out.println(sHTML);
     }
-    user.senha = senhas;
-        user.incluir(); // chama o método para fazer a inclusão no banco de dados
         
-    }
+    }  
 if ( !(user.statusSQL == null) ) out.println(user.statusSQL);{
     if("".equals(buttonval)){
          String sHTML="<center>Usuário criado com Sucesso!<br>"
@@ -45,5 +68,8 @@ if ( !(user.statusSQL == null) ) out.println(user.statusSQL);{
                      </td></tr>
                         <td></td><td align = center>
                             <input type="button" value="Voltar" onclick="window.location.assign('login.html');">
-                            <input type="submit" value="Enviar" name="Enviar" onclick="formreg.oper.value = '1';"></td></tr> </table>
+                            <input type="submit" value="Enviar" name="Enviar" onclick="formreg.oper.value = '1';">
+                            <input type="submit" value="Deletar" name="Deletar" onclick="formreg.oper.value = '2';">
+                            <input type="submit" value="Editar" name="Editar" onclick="formreg.oper.value = '3';">
+                        </td></tr> </table>
             </form> </div> </body> </html>
