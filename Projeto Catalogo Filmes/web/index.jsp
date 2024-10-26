@@ -1,6 +1,8 @@
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%String nome = (String) session.getAttribute("usuarioName");%>
+<%@page import="model.Usuario"%>
+<%String nome = (String) session.getAttribute("usuarioName");
+Usuario user = new Usuario();
+%>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

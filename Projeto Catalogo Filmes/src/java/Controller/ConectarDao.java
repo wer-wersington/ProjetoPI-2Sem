@@ -9,6 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException; // Tratamento de Erros SQL
 import java.sql.Connection; // Armazena a Conexão Aberta
 import java.sql.PreparedStatement;
+
 public class ConectarDao {
 
     public Connection con = null;
@@ -17,7 +18,9 @@ public class ConectarDao {
     public String htmlError = null;
     public ResultSet tab = null;
     public String MeuBanco = "catalogofilms";
-    public String statusSQL; /* Na variável statusSQl conterá null quando não tiver erros
+    public String statusSQL;
+
+    /* Na variável statusSQl conterá null quando não tiver erros
 Mas quando haver erros conterá a mensagem de erro capturada
 Pela excessão da clausula try. */
 
@@ -50,7 +53,20 @@ Pela excessão da clausula try. */
                     + "DS_EMAIL varchar(200) not null UNIQUE,"
                     + "DS_SENHA varchar(200) not null ,"
                     + "primary key (ID_USUARIO))";
+            ps = con.prepareStatement(sql); // prepara o objeto que irá executar o comando SQL
+            ps.executeUpdate();// Executa o comando SQL
             
+           sql = "CREATE TABLE IF NOT EXISTS TB_FILME ("
+                    + "ID_FILME INT NOT NULL AUTO_INCREMENT,"
+                    + "NM_FILME VARCHAR(200) NOT NULL,"
+                    + "DS_SINOPSE VARCHAR(200)NOT NULL,"
+                    + "HR_DURACAO TIME NOT NULL,"
+                    + "DT_LANCAMENTO DATE NOT NULL,"
+                    + "VL_AVALIACAO DECIMAL(2, 1) NOT NULL,"
+                    + "NR_CLASSIFICACAO_INDICATIVA INT NOT NULL,"
+                    + "primary key (ID_FILME)"
+                    + ");";
+
             ps = con.prepareStatement(sql); // prepara o objeto que irá executar o comando SQL
             ps.executeUpdate();// Executa o comando SQL
 
@@ -58,5 +74,5 @@ Pela excessão da clausula try. */
             htmlError = err.getMessage();
         }
     }
-}
 
+}
