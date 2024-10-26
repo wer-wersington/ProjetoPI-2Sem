@@ -87,7 +87,9 @@
   margin-left: 24px;
   margin-bottom: 32px;
 }
-.inputs_area.linear .div_list_inputs .input_div_grid input, .inputs_area.linear .div_list_inputs .input_div_grid textarea, .inputs_area.linear .div_list_inputs .input_div_grid button {
+.inputs_area.linear .div_list_inputs .input_div_grid input,
+.inputs_area.linear .div_list_inputs .input_div_grid textarea,
+.inputs_area.linear .div_list_inputs .input_div_grid button {
   margin-top: 16px;
   height: 48px;
   width: 264px;
@@ -155,6 +157,40 @@
 .inputs_area.linear .div_list_inputs .title_actor_name {
   font-size: 20px;
 }
+.inputs_area.linear .div_list_inputs .container_inputs_edit_actor {
+  width: 560px;
+  height: 348px;
+  background-color: #8501B0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.inputs_area.linear .div_list_inputs .container_inputs_edit_actor .div_picture_actor_input {
+  display: flex;
+  flex-direction: column;
+  margin-right: 34px;
+}
+.inputs_area.linear .div_list_inputs .container_inputs_edit_actor .div_picture_actor_input .input_capas_picture {
+  height: 348px;
+  background-color: #171317;
+  border: none;
+  width: 260px;
+  border-radius: 8px;
+}
+.inputs_area.linear .div_list_inputs .container_inputs_edit_actor .div_picture_actor_input .input_capas_picture .actor_picture {
+  width: 184px;
+}
+.inputs_area.linear .div_list_inputs .container_inputs_edit_actor .input_capas_picture > input[type=file] {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+  background-color: #171317;
+  border: none;
+}
+.inputs_area.linear .div_list_inputs .container_inputs_edit_actor .input_capas_picture > input[type=file]:focus-within {
+  border: 10px solid #8501B0;
+}
 
 footer {
   min-width: calc(100% - 80px);
@@ -162,7 +198,7 @@ footer {
   height: 256px;
   display: flex;
   align-items: center;
-  justify-content: right;
+  justify-content: space-around;
 }
 footer .footer_container_area {
   display: flex;
@@ -181,6 +217,14 @@ footer .footer_container_area .cancel_btn {
   background-color: transparent;
   border: 1px solid #878387;
   color: #878387;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+footer .footer_container_area .delet_btn {
+  background-color: transparent;
+  border: 1px solid #FF2929;
+  color: #FF2929;
   font-size: 22px;
   text-align: center;
   margin-bottom: 8px;
