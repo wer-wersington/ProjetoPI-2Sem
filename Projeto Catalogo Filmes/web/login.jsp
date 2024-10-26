@@ -16,7 +16,7 @@
    
  } else{
     String sHTML="<center>Opa! Login ou Senha não encontrados! Tente Novamente! <br>"
-    + "<a href = '/Projeto_Catalogo_Filmes'> Voltar </a></center>";
+    + "<a href = '/Projeto_Catalogo_Filmes/login.html'> Voltar </a></center>";
     out.println(sHTML);
    }
  %>
